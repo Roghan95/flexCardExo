@@ -30,6 +30,7 @@ html, body {
     filter: grayscale(100%);
     transition: 0.5s ease-in-out;
     position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -61,13 +62,12 @@ img {
 
 .heart {
     box-sizing: border-box;
-    position: absolute;
     height: 50px;
     width: 50px;
     border-top-left-radius: 10px;
-    border: 1px solid;
     background-color: rgba(255, 0, 119, 0.363);
     color: white;
+    z-index: 1;
 }
 
 .card-header {
@@ -75,7 +75,6 @@ img {
     height: 170px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    position: relative;
 }
 
 .card-header .heart {
@@ -83,11 +82,12 @@ img {
     justify-content: center;
     align-items: center;
     transform: translateX(-100%);
+    position: absolute;
 }
 
 .card:hover .heart {
     transform: translateX(0%);
-    position: relative;
+    position: absolute;
     transition: 1s;
 }
 
