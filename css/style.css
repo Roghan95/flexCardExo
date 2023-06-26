@@ -34,11 +34,12 @@ html, body {
 }
 
 .card:hover {
-    filter: grayscale(0%);
     cursor: pointer;
+    filter: grayscale(0%);
 }
 
 .card:hover img {
+    filter: grayscale(0%);
     transform: scale(1.05);
     transition: transform 1s ease;
 }
@@ -65,9 +66,11 @@ img {
     height: 50px;
     width: 50px;
     border-top-left-radius: 10px;
-    background-color: rgba(255, 0, 119, 0.363);
+    background-color: rgb(255, 0, 119);
     color: white;
     z-index: 1;
+    transition: 1s;
+    filter: grayscale(100%);
 }
 
 .card-header {
@@ -86,9 +89,10 @@ img {
 }
 
 .card:hover .heart {
+    filter: grayscale(0%);
     transform: translateX(0%);
     position: absolute;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 
